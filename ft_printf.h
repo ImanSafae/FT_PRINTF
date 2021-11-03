@@ -10,21 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <unistd.h>
 # include <stdarg.h>
 
-int     ft_printf(const char *s, ...);
-void    ft_putchar(char c);
-void    ft_putchar_count(char c, int *count);
-void    ft_putnbr_base_count(unsigned long n, int *count);
-void    ft_putnbr_count(int n, int *count);
-void    ft_putptr_count(unsigned long ptr, int *count);
-void    ft_putstr_count(char *s, int *count);
-int     ft_strlen(const char *str);
-void    print_args(const char *s, size_t i, va_list arglist, int *count);
-
+int		ft_printf(const char *s, ...);
+void	ft_putchar(char c);
+void	ft_putchar_count(char c, int *count);
+void	ft_putnbr_base_count(unsigned long n, int *count, int capitals);
+void	ft_putnbr_upperbase_count(unsigned long n, int *count);
+void	ft_putnbr_count(int n, int *count);
+void	ft_putptr_count(unsigned long ptr, int *count);
+void	ft_putstr_count(char *s, int *count);
+void	ft_putunsignedchar_count(unsigned int c, int *count);
+void	ft_putunsignednbr_count(unsigned int n, int *count);
+int		ft_strlen(const char *str);
+void	print_args(const char *s, size_t i, va_list arglist, int *count);
 
 #endif
